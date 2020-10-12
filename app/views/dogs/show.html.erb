@@ -1,0 +1,13 @@
+<h1> Best In Show </h1>
+
+<h3> <%= @dog.name %> </h3>
+<p> Breed: <%= @dog.breed %> </p>
+<p> Age: <%= @dog.age %> </p>
+
+<h3> This dog owns the following employees: </h3>
+
+<ul>
+    <% @dog.employees.each do |employee| %>
+        <li> <%= link_to employee.full_name, employee_path(employee) %> </li>
+    <% end %>
+</ul>

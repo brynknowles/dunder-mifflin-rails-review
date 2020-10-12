@@ -1,0 +1,8 @@
+<h1>Dunder-Mifflin Dog Roster</h1>
+<img src="https://external-preview.redd.it/3vzemqEEdF5qvYLz7XTfk5mSAK7i8t0eb6Dol7hbcKQ.jpg?width=960&crop=smart&auto=webp&s=c642df3b84db20117057699704a72593b94054ea"><br>
+
+<% @dogs.sort_by do |dog| dog.num_owners %>
+    <ul>
+        <li><%= link_to dog.name, dog_path(dog) %> has <%= dog.num_owners %> owner(s) </li>
+    </ul>
+<% end %>
